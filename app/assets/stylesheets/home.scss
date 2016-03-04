@@ -1,3 +1,34 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.box {
+  border: 5px solid black;
+}
+.universal-navbar {
+  height:100px;
+  width: 100%;
+  background-color: transparent;
+  color: #3c3f4f;
+
+  .container{
+    height: 100%;
+  }
+
+  .universal-left{
+    height: 100%;
+    width: 80px;
+    float: left;
+  }
+
+  .universal-center {
+    height: 100%;
+    width: 150px;
+    margin: 0px auto;
+    text-align: center;
+
+
+    h2{
+      line-height: 100px;
+    }
+  }
+}
