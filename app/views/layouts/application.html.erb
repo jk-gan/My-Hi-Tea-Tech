@@ -7,36 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="wrapper">
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">
-                </a>
-            </li>
-            <li>
-                <a href="#">Dashboard</a>
-            </li>
-            <li>
-                <a href="#">Shortcuts</a>
-            </li>
-            <li>
-                <a href="#">Overview</a>
-            </li>
-            <li>
-                <a href="#">Events</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
-    </div>
+  <div class = "left-div sidebar">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a href="#">
+            </a>
+        </li>
+        <li>
+            <a href="#">News</a>
+        </li>
+        <li>
+            <a href="#">Event</a>
+        </li>
+        <li>
+            <a href="#">FICTS TV</a>
+        </li>
+        <li>
+            <a href="#">Events</a>
+        </li>
+        <li>
+            <a href="#">Services</a>
+        </li>
+    </ul>
+  </div>
+  <div class = "right-div content">
     <div class="universal-navbar">
       <div class="container">
         <div class="universal-left">
@@ -45,24 +39,23 @@
           </a>
         </div>
         <div class="universal-center">
-          <h2>FICTS</h2>
+          <h3>FICTS</h3>
         </div>
       </div>
 
-
     </div>
     <%= yield %>
-
   </div>
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+    $(function() {
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $(".left-div").toggleClass("toggled");
+          $(".right-div").toggleClass("toggled2");
+      });
     });
   </script>
-
-
 </body>
 </html>
